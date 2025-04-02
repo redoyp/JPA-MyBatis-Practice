@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springmybatis.repository.StudentMapper">
+
+    <select id="countStudents" resultType="int">
+        SELECT count(*)
+        FROM students;
+    </select>
+
+    <select id="selectStudents" resultType="Students">
+        SELECT id, name, age, address
+        FROM students
+        <where>
+            <if test="id != null and id != ''">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+
+<!--    <insert id="insertStudents" parameterType="Students">-->
+<!--        INSERT INTO students (name, address, age)-->
+<!--        VALUES (#{name}, #{address}, #{age});-->
+<!--    </insert>-->
+
+<!--    <update id="">-->
+
+<!--    </update>-->
+
+<!--    <delete id="">-->
+
+<!--    </delete>-->
+
+</mapper>
