@@ -32,7 +32,7 @@ public class MemberService {
     // member 단건 조회
     public Member getMemberById(Long id) {
         Optional<Member> optMember = memberRepository.findById(id);
-        return optMember.orElse(new Member());  // id에 해당하는 값 없으면 빈 Member 객체 반환
+        return optMember.orElseGet(Member::new);  // id에 해당하는 값 없으면 빈 Member 객체 반환
     }
 
     // member id 삭제
