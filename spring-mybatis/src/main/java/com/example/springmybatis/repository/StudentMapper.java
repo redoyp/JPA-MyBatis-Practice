@@ -12,6 +12,11 @@ public interface StudentMapper {
     // 전체 select
     List<Students> selectStudents(int id);
 
-//    // insert
-//    List<Students> insertStudents(Students students);
+    // insert
+    // int : insert된 row 수 출력해주기 위해
+    int saveStudent(Students student);
+
+    int updateStudent(Students students);
+
+    int deleteStudent(int id);
 }

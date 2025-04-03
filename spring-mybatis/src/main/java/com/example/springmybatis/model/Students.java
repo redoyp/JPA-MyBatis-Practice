@@ -23,13 +23,13 @@ public class Students {
         return name;
     }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() { return address; }
 
     public int getAge() {
         return age;
     }
+
+    public void setId(int id) { this.id = id; }
 
     public void setAge(int age) {
         this.age = age;

@@ -21,7 +21,13 @@ public class StudentService {
         return studentMapper.selectStudents(id);
     }
 
-//    public List<Students> insertStudents(Students students) {
-//        return studentMapper.insertStudents(students);
-//    }
+    public int saveStudent(Students students) {
+        return studentMapper.saveStudent(students);
+    }
+
+    public int updateStudent(Students students) {
+        return studentMapper.updateStudent(students);
+    }
+
+    public int deleteStudent(int id) { return studentMapper.deleteStudent(id); }
 }

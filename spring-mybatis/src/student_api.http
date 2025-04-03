@@ -1,4 +1,20 @@
 ### GET request to example server
+GET http://localhost:8080/students/count
+
+### GET request to example server
 GET http://localhost:8080/students
 
-###
+### POST request
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{"name": "장이수", "age": 30, "address": "서울시"}
+
+### PUT request
+PUT http://localhost:8080/students/5
+Content-Type: application/json
+
+{"name": "장이수", "age": 28, "address": "수원시"}
+
+### DELETE request
+DELETE http://localhost:8080/students/5

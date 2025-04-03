@@ -18,17 +18,21 @@
         </where>
     </select>
 
-<!--    <insert id="insertStudents" parameterType="Students">-->
-<!--        INSERT INTO students (name, address, age)-->
-<!--        VALUES (#{name}, #{address}, #{age});-->
-<!--    </insert>-->
+    <!-- useGeneratedKeys ~: AutoIncrement(자동으로 id 순차적으로 입력) -->
+    <insert id="saveStudent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO students (name, age, address)
+        VALUES (#{name}, #{age}, #{address})
+    </insert>
 
-<!--    <update id="">-->
+    <update id="updateStudent">
+        UPDATE students
+        SET name = #{name}, age = #{age}, address = #{address}
+        WHERE id = #{id}
+    </update>
 
-<!--    </update>-->
-
-<!--    <delete id="">-->
-
-<!--    </delete>-->
+    <delete id="deleteStudent">
+        DELETE FROM students
+        WHERE id=#{id}
+    </delete>
 
 </mapper>
