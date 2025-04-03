@@ -1,0 +1,16 @@
+### GET request to example server
+GET http://localhost:8080/members
+
+### INSERT
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+  "name": "이름"
+}
+
+### GET id
+GET http://localhost:8080/members/7
+
+### DELETE id
+DELETE http://localhost:8080/members/8
