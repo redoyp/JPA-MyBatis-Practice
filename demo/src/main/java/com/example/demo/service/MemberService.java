@@ -39,4 +39,9 @@ public class MemberService {
     public void deleteMemberById(Long id) {
         memberRepository.deleteById(id);
     }
+
+    // member 이름으로 조회
+    public List<Member> selectMemberByName(String name) {
+        return memberRepository.findByName(name);
+    }
 }

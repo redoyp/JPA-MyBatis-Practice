@@ -14,3 +14,6 @@ GET http://localhost:8080/members/7
 
 ### DELETE id
 DELETE http://localhost:8080/members/8
+
+### 회원 이름으로 조회
+GET http://localhost:8080/search/members?name=이름

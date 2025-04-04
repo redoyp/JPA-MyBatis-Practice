@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequiredArgsConstructor
@@ -47,5 +48,12 @@ public class MemberController {
     public String deleteMemberById(@PathVariable Long id) {
         memberService.deleteMemberById(id);
         return "삭제 성공";
+    }
+
+    // GET /search/members?name=---
+    @ResponseBody
+    @GetMapping("/search/members")
+    public List<Member> selectMemberByName(@RequestParam("name") String name) {
+        return memberService.selectMemberByName(name);
     }
 }
