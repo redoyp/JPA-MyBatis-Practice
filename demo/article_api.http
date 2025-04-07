@@ -1,0 +1,16 @@
+### POST create request to blog server
+POST http://localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "제목3",
+  "content": "내용3"
+}
+
+
+### GET 블로그 전체 목록 조회
+GET http://localhost:8080/api/articles
+
+
+### GET 블로그 단건 조회
+GET http://localhost:8080/api/articles/6
