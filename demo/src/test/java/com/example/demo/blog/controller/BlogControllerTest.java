@@ -44,7 +44,7 @@ class BlogControllerTest {
     }
 
     @Test
-    void saveArticle() throws Exception{
+    public void saveArticle() throws Exception{
         // given: Object -> json (ObjectMapper 사용해서 직렬화)
         AddArticleRequest request =new AddArticleRequest("제목", "내용");
         String requestBody = objectMapper.writeValueAsString(request);
@@ -70,7 +70,7 @@ class BlogControllerTest {
 
     // 전체 목록 조회 API 테스트
     @Test
-    void findAllArticles() throws Exception{
+    public void findAllArticles() throws Exception{
         // given: 테스트용 article 값 저장
         Article savedArticle = Article.builder()
                 .title("저장하려는 제목")
@@ -89,7 +89,7 @@ class BlogControllerTest {
 
     // 단건 조회 API 테스트
     @Test
-    void findArticleById() throws Exception{
+    public void findArticleById() throws Exception{
         // given
         Article savedArticle = Article.builder()
                 .title("저장하려는 제목")
