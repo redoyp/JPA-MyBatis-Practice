@@ -13,4 +13,32 @@ GET http://localhost:8080/api/articles
 
 
 ### GET 블로그 단건 조회
-GET http://localhost:8080/api/articles/6
+GET http://localhost:8080/api/articles/5
+
+
+### DELETE 블로그 게시글 단건 삭제
+DELETE http://localhost:8080/api/articles/1
+
+
+### DELETE 블로그 게시글 전체 삭제
+DELETE http://localhost:8080/api/articles
+
+
+### PUT 블로그 게시글 단건 수정
+PUT http://localhost:8080/api/articles/1
+Content-Type: application/json
+
+{
+  "title": "제목11",
+  "content": "내용11"
+}
+
+
+### PUT id 없음 오류 확인(400 오류 확인)
+PUT http://localhost:8080/api/articles/1000
+Content-Type: application/json
+
+{
+  "title": "제목11",
+  "content": "내용11"
+}

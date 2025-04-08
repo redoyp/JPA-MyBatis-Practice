@@ -30,6 +30,12 @@ public class Article {
 //
 //    }
 
+    // title, content = ?        commit;   =>   update
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
     // insert 할 때 id 값은 안쓰고 title, contnet를 사용하여 넣기 위해 필요
     @Builder
     public Article(String title, String content) {
