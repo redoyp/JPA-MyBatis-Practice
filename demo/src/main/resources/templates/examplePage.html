@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>타임리프 학습</h1>
+<p th:text="${#temporals.format(today, 'yyyy-MM-dd')}"></p>
+<!-- temporal 이라는 내부객체를 이용하여 formatting -->
+
+<div th:object="${person}">
+    <!-- person 객체 안에 있는 하위 객체 name, age, hobbies는 * 태그로 불러옴 -->
+    <p th:text="|이름 : *{name}|"></p>
+    <p th:text="|나이 : *{age}|"></p>
+    <!-- | | 안에 있는 것들은 서로 이어 붙여짐. + 라고 생각하면 됨 -->
+    <p>취미</p>
+    <ul th:each="hobby : *{hobbies}"> <!-- hobbies 갯수만큼 반복. each는 for 문이라고 생각하면 됨 -->
+        <li th:text="${hobby}"></li>
+        <span th:if="${hobby == '여행'}">(대표취미)</span>
+    </ul>
+</div>
+
+<a th:href="@{/api/articles/{id}(id=${person.id})}">글 보기</a>
+</body>
+</html>
