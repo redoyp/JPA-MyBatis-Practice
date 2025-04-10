@@ -1,4 +1,4 @@
-package com.example.demo.blog;
+package com.example.demo.blog.domain;
 
 import com.example.demo.blog.dto.ArticleResponse;
 import jakarta.persistence.Column;

@@ -1,6 +1,6 @@
 package com.example.demo.blog.service;
 
-import com.example.demo.blog.Article;
+import com.example.demo.blog.domain.Article;
 import com.example.demo.blog.dto.AddArticleRequest;
 import com.example.demo.blog.dto.UpdateArticleRequest;
 import com.example.demo.blog.repository.BlogRepository;

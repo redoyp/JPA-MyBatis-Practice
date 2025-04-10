@@ -1,6 +1,6 @@
 package com.example.demo.blog.dto;
 
-import com.example.demo.blog.Article;
+import com.example.demo.blog.domain.Article;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

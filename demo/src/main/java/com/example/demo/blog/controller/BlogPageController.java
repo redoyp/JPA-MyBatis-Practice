@@ -1,6 +1,6 @@
 package com.example.demo.blog.controller;
 
-import com.example.demo.blog.Article;
+import com.example.demo.blog.domain.Article;
 import com.example.demo.blog.dto.ArticleViewResponse;
 import com.example.demo.blog.service.BlogService;
 import java.util.List;
