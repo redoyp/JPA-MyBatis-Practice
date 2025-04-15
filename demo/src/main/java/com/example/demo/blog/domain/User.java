@@ -32,7 +32,7 @@ public class User implements UserDetails {
     // 권한을 주는 곳, 권한을 가진 user 만 접근 할 수 있도록
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+        return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"));
         // 일반 user : ROLE_USER, admin : ROLE_ADMIN
     }
 
